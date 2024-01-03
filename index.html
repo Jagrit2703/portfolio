@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Hey There !</a>
+            </li>
+          </ul>
+    </nav>
+    <div class="header-text">
+        <p>UX/UI desginer</p>
+        <h1>Hi, I'm<span> Jagrit Pant</span> <br> I'm a Front end web developer</h1>
+    </div>
+    <div id="about">
+        <div class="contianer">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/portrait.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1> 
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro amet quibusdam natus perferendis aspernatur culpa tenetur facere minima corrupti, ullam id dolorem minus ducimus numquam eos vel quasi, blanditiis odit. Ullam, voluptate aspernatur porro ex ducimus asperiores, doloremque sint, non amet et fugit incidunt necessitatibus praesentium error culpa eaque nulla. Vero aspernatur dolorem ad consequuntur veniam nulla obcaecati, in aliquam?</p> 
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">
+                        Skills</p>
+                        <p class="tab-links"onclick="opentab('Experience')">
+                        Experience</p>
+                        <p class="tab-links"onclick="opentab('Education')">
+                        Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                      <ul>
+                        <li><span>UI/UX</span><br>Designing Interfaces</li>
+                        <li><span>Graphic Designing</span><br>Designing Posters</li>
+                        <li><span>C++</span><br>Problem solving and understanding of data structures and algorithms</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tab-contents"id="Experience">
+                    <ul>
+                      <li><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, accusamus?</span><br></li>
+                      <li><span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum, adipisci?</span><br></li>
+                      <li><span>Lorem ipsum dolor sit amet.</span><br></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab-contents"id="Education">
+                  <ul>
+                    <li><span>School</span><br>Completed my education from High Vision International School</li>
+                    <li><span>College</span><br>Btech Student at VIT Bhopal with specialisation in Cloud computing</li>
+                    <li><span>Additional courses</span><br></li>
+                  </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- --------------portfolio------------- -->
+    <div id="portfolio">
+      <div class="contianer">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="assets/work.jpg" >
+            <div class="layer">
+              <h3>Note taking website</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="assets/work.jpg" >
+          </div>
+          <div class="work">
+            <img src="assets/work.jpg" >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks=document.getElementsByClassName("tab-links");
+      var tabcontents=document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+</body>
+</html>
